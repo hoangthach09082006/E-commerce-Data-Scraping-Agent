@@ -1,0 +1,25 @@
+scraping_task:
+  description: >
+    Scrape the e-commerce website at the URL: {website_url}
+    Extract all available product information including:
+    - Product names
+    - Prices
+    - Descriptions
+    - Image URLs
+    - Ratings (if available)
+    - Product links
+    
+    If the default product selector doesn't work, try to identify the correct CSS selector
+    by analyzing the page structure. Return the scraped data in a structured JSON format.
+  expected_output: >
+    A JSON object containing:
+    - The URL that was scraped
+    - Total number of products found
+    - An array of products, each with:
+      * name (product name)
+      * price (product price)
+      * description (product description if available)
+      * image_url (product image URL if available)
+      * rating (product rating if available)
+      * product_url (link to product page if available)
+  agent: ecommerce_scraper
